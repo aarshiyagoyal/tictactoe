@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.game-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.cell:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+#status {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #fff;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background: #ff4081;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e91e63;
+}
+
+/* 🎉 Confetti Overlay */
+.confetti {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.confetti.fade-out {
+  opacity: 0;
+}
+
+.confetti img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
